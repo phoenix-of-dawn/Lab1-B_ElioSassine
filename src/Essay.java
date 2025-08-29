@@ -1,3 +1,6 @@
+
+import java.security.InvalidParameterException;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -27,7 +30,6 @@ public class Essay extends GradedActivity {
     public void setGrammar(double grammar) {
         if (grammar > 30) {
             System.out.println("Invalid score: Grammar score must be less than 30");
-            return;
         }
         
         this.grammar = grammar;
@@ -36,7 +38,6 @@ public class Essay extends GradedActivity {
     public void setSpelling(double spelling) {
         if (spelling > 20) {
             System.out.println("Invalid score: Spelling score must be less than 20");
-            return;
         }
         this.spelling = spelling;
     }
@@ -44,7 +45,6 @@ public class Essay extends GradedActivity {
     public void setCorrectLength(double correctLength) {
         if (correctLength > 20) {
             System.out.println("Invalid score: Length score must be less than 20");
-            return;
         }
         this.correctLength = correctLength;
     }
@@ -52,7 +52,6 @@ public class Essay extends GradedActivity {
     public void setContent(double content) {
         if (content > 30) {
             System.out.println("Invalid score: Content score must be less than 30");
-            return;
         }
         this.content = content;
     }
