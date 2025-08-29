@@ -26,4 +26,17 @@ public class FinalExam extends GradedActivity {
     public int getNumMissed() {
         return numMissed;
     }
+    
+    @Override
+    public String toString() {
+        return String.format("""
+                      Each questions counts for %.1f points
+                      The exam score is %.1f
+                      The exam grades is %s
+                      """,
+                this.pointsEach,
+                this.getScore(),
+                this.getGrade()
+        );
+    }
 }

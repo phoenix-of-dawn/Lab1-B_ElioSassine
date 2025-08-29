@@ -15,12 +15,12 @@ public class PassFailActivity extends GradedActivity {
     }
 
     @Override
-    public String getGrade() {
+    public char getGrade() {
         if (this.getScore() > this.minPassingScore) {
-            return "P";
+            return 'P';
         }
         
-        return "F";
+        return 'F';
     }
 
         

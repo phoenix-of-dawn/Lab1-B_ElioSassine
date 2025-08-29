@@ -12,18 +12,18 @@ public class GradedActivity {
 
     
     
-    public String getGrade() {
+    public char getGrade() {
         if (score >= 90) {
-            return "A";
+            return 'A';
         } else if (score >= 80) {
-            return "B";
+            return 'B';
         } else if (score >= 70) {
-            return "C";
+            return 'C';
         } else if (score >= 60) {
-            return "D";
+            return 'D';
         }
         
-        return "E";
+        return 'E';
     }
     
     public double getScore() {

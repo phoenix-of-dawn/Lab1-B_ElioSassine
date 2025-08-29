@@ -7,7 +7,7 @@
  *
  * @author 2493512
  */
-public class Essay {
+public class Essay extends GradedActivity {
     private double grammar;
     private double spelling;
     private double correctLength;
@@ -20,6 +20,8 @@ public class Essay {
         this.setSpelling(sp);
         this.setCorrectLength(len);
         this.setContent(cnt);
+        
+        this.setScore(this.grammar + this.spelling + this.content + this.correctLength);
     }
     
     public void setGrammar(double grammar) {
@@ -27,6 +29,7 @@ public class Essay {
             System.out.println("Invalid score: Grammar score must be less than 30");
             return;
         }
+        
         this.grammar = grammar;
     }
 
@@ -68,6 +71,17 @@ public class Essay {
 
     public double getContent() {
         return content;
+    }
+    
+    @Override
+    public String toString() {
+        return String.format("""
+                      Total points: %.1f
+                             Grade: %s
+                      """,
+                this.getScore(),
+                this.getGrade()
+        );
     }
     
     
